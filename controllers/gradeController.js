@@ -103,4 +103,15 @@ const removeAll = async (req, res) => {
   }
 };
 
-export default { create, findAll, findOne, update, remove, removeAll };
+
+const teste = async (req, res) => {
+  try {
+    res.send({message: 'Teste realizado com sucesso'});
+    logger.info(`GET /grade/teste`);
+  } catch (error) {
+    res.status(500).send({ message: 'Erro ao executar teste' });
+    logger.error(`GET /grade - ${JSON.stringify(error.message)}`);
+  }
+};
+
+export default { create, findAll, findOne, update, remove, removeAll, teste };
