@@ -9,6 +9,6 @@ app.get('/grade/:id', controller.findOne);
 app.put('/grade/:id', controller.update);
 app.delete('/grade/:id', controller.remove);
 app.delete('/grade/', controller.removeAll);
-app.get('/grade/teste', controller.teste);
+app.get('/teste/', controller.teste);
 
 export { app as gradeRouter };
